@@ -1,3 +1,5 @@
+import org.omg.CORBA.UserException;
+
 /**
  * Created by tr1o on 27.11.17.
  */
@@ -9,43 +11,57 @@ public class Calculator {
      * Сложение аргументов
      * @param params
      */
-    void add(float ... params) {
-        for (Float param: params) {
-            result += param;
-        }
+    void add(float ... params) throws CalculatorException {
+        if (params.length > 0) {
+            for (Float param : params) {
+                result += param;
+            }
+        } else
+            throw new CalculatorException("Error, you must enter min two arguments");
     }
 
     /**
      * Вычитание агрументов
      * @param params
      */
-    void sub(float ... params) {
-        for (int i = 0; i < params.length; i++) {
-            if (i == 0) result = params[i];
-            else result -= params[i];
-        }
+    void sub(float ... params) throws CalculatorException {
+        if (params.length > 0) {
+            for (int i = 0; i < params.length; i++) {
+                if (i == 0) result = params[i];
+                else result -= params[i];
+            }
+        } else
+            throw new CalculatorException("Error, you must enter min two arguments");
     }
 
     /**
      * Деление аргументов
      * @param params
      */
-    void div(float ... params) {
-        for (int i = 0; i < params.length; i++) {
-            if (params[i] == 0) result = 0;
-            if (i == 0) result = params[i];
-            else result /= params[i];
-        }
+    void div(float ... params) throws CalculatorException {
+        if (params.length > 0) {
+            for (int i = 0; i < params.length; i++) {
+                if (params[i] == 0) {
+                    throw new CalculatorException("Error, You try to div on 0");
+                }
+                if (i == 0) result = params[i];
+                else result /= params[i];
+            }
+        } else
+            throw new CalculatorException("Error, you must enter min two arguments");
     }
 
     /**
      * Пермножение аргуметов
      * @param params
      */
-    void mul(float ... params) {
-        for (Float param: params) {
-            result *= param;
-        }
+    void mul(float ... params) throws CalculatorException {
+        if (params.length > 0) {
+            for (Float param : params) {
+                result *= param;
+            }
+        } else
+            throw new CalculatorException("Error, you must enter min two arguments");
     }
 
     /**

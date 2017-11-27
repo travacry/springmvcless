@@ -12,13 +12,17 @@ public class Calculate {
         float first = Float.valueOf(args[0]);
         float second = Float.valueOf(args[1]);
 
-        calc.add(first,second);
-        System.out.println(calc.getResult());
-        calc.sub(first,second);
-        System.out.println(calc.getResult());
-        calc.div(first,second);
-        System.out.println(calc.getResult());
-        calc.mul(first,second);
-        System.out.println(calc.getResult());
+        try {
+            calc.add(first, second);
+            System.out.println(calc.getResult());
+            calc.sub(first, second);
+            System.out.println(calc.getResult());
+            calc.div(first, second);
+            System.out.println(calc.getResult());
+            calc.mul(first, second);
+            System.out.println(calc.getResult());
+        } catch (CalculatorException e) {
+            e.printStackTrace();
+        }
     }
 }
