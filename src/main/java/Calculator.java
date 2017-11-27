@@ -1,7 +1,9 @@
-import org.omg.CORBA.UserException;
-
 /**
  * Created by tr1o on 27.11.17.
+ */
+
+/**
+ * Калькулятор
  */
 public class Calculator {
 
@@ -57,9 +59,12 @@ public class Calculator {
      */
     void mul(float ... params) throws CalculatorException {
         if (params.length > 0) {
+            Float val = null;
             for (Float param : params) {
-                result *= param;
+                if (val == null) val = param;
+                else val *= param;
             }
+            if (val != null) result = val;
         } else
             throw new CalculatorException("Error, you must enter min two arguments");
     }
