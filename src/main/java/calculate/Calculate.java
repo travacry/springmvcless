@@ -1,3 +1,5 @@
+package calculate;
+
 /**
  * Created by tr1o on 27.11.17.
  */

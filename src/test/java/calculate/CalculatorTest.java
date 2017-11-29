@@ -1,9 +1,11 @@
-/**
+package calculate; /**
  * Created by tr1o on 28.11.17.
  */
 
 import static org.junit.Assert.*;
 
+import calculate.Calculator;
+import calculate.CalculatorException;
 import org.junit.Test;
 
 /**
