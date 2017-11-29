@@ -13,9 +13,9 @@ public class Calculator {
      * Сложение аргументов
      * @param params
      */
-    void add(float ... params) throws CalculatorException {
+    void add(final float ... params) throws CalculatorException {
         if (params.length > 0) {
-            for (Float param : params) {
+            for (float param : params) {
                 result += param;
             }
         } else
@@ -26,7 +26,7 @@ public class Calculator {
      * Вычитание агрументов
      * @param params
      */
-    void sub(float ... params) throws CalculatorException {
+    void sub(final float ... params) throws CalculatorException {
         if (params.length > 0) {
             for (int i = 0; i < params.length; i++) {
                 if (i == 0) result = params[i];
@@ -40,7 +40,7 @@ public class Calculator {
      * Деление аргументов
      * @param params
      */
-    void div(float ... params) throws CalculatorException {
+    void div(final float ... params) throws CalculatorException {
         if (params.length > 0) {
             for (int i = 0; i < params.length; i++) {
                 if (params[i] == 0) {
@@ -57,14 +57,14 @@ public class Calculator {
      * Пермножение аргуметов
      * @param params
      */
-    void mul(float ... params) throws CalculatorException {
+    void mul(final float ... params) throws CalculatorException {
+        Float val = null;
         if (params.length > 0) {
-            Float val = null;
             for (Float param : params) {
                 if (val == null) val = param;
                 else val *= param;
             }
-            if (val != null) result = val;
+            result = val;
         } else
             throw new CalculatorException("Error, you must enter min two arguments");
     }
