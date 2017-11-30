@@ -15,4 +15,10 @@ public interface Pet {
      * @return
      */
     String getName();
+
+    /**
+     * Клонирование питомца
+     * @return
+     */
+    public Pet copy();
 }

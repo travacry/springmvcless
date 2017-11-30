@@ -35,4 +35,10 @@ public class CatDog implements Pet {
     public String getName() {
         return String.format("Name cat: %s, Name dog: %s", cat.getName(), dog.getName());
     }
+
+    @Override
+    public Pet copy() {
+        // todo :: заглушка
+        return null;
+    }
 }

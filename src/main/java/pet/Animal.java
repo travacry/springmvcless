@@ -43,4 +43,12 @@ public class Animal implements Pet {
         //todo :: добавить алгоритм вычисления состояния
         return true;
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Pet copy() {
+        return new Animal(this.name);
+    }
 }

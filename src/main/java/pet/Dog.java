@@ -29,4 +29,9 @@ public class Dog implements Pet {
     public String getName() {
         return pet.getName();
     }
+
+    @Override
+    public Dog copy() {
+        return new Dog(this.pet);
+    }
 }
