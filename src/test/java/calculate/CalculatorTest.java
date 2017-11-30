@@ -46,7 +46,18 @@ public class CalculatorTest {
     @Test
     public void divTwoParams() throws CalculatorException {
         Calculator calculator = new Calculator();
-        calculator.mul(3, 2); //6
+        calculator.div(8, 2); //6
+        assertEquals(4, calculator.getResult(), 0);
+    }
+    /**
+     * Проверка деления двух чисел
+     *
+     * @throws CalculatorException
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void divIllegalArgumentException() throws CalculatorException {
+        Calculator calculator = new Calculator();
+        calculator.div(3, 0); //6
         assertEquals(6, calculator.getResult(), 0);
     }
 
@@ -58,8 +69,8 @@ public class CalculatorTest {
     @Test
     public void mulTwoParams() throws CalculatorException {
         Calculator calculator = new Calculator();
-        calculator.div(8, 2);
-        assertEquals(4, calculator.getResult(), 0);
+        calculator.mul(6, 2);
+        assertEquals(12, calculator.getResult(), 0);
     }
 
 }
