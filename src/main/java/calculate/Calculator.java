@@ -44,7 +44,8 @@ public class Calculator {
         if (params.length > 0) {
             for (int i = 0; i < params.length; i++) {
                 if (params[i] == 0) {
-                    throw new CalculatorException("Error, You try to div on 0");
+                    // runtime exception
+                    throw new IllegalArgumentException("Error, You try to div on 0");
                 }
                 if (i == 0) result = params[i];
                 else result /= params[i];
