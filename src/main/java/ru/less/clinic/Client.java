@@ -1,6 +1,6 @@
-package clinic;
+package ru.less.clinic;
 
-import pet.Pet;
+import ru.less.pet.Pet;
 
 /**
  * Клиент

@@ -1,4 +1,4 @@
-package calculate; /**
+package ru.less.calculate; /**
  * Created by tr1o on 27.11.17.
  */
 

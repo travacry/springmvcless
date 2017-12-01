@@ -1,9 +1,5 @@
-package calculate;
+package ru.less.calculate;
 
-import calculate.Calculator;
-import calculate.CalculatorException;
-import calculate.ConvertorException;
-import calculate.HexCalc;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

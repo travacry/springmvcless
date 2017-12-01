@@ -1,4 +1,4 @@
-package pet;
+package ru.less.pet;
 
 /**
  * Реализация кота

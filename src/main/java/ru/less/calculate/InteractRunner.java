@@ -1,4 +1,4 @@
-package calculate;
+package ru.less.calculate;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

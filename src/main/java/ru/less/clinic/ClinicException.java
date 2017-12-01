@@ -1,4 +1,4 @@
-package clinic;
+package ru.less.clinic;
 
 /**
  * Created by tr1o on 30.11.17.

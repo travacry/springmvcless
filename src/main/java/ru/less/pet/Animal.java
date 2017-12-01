@@ -1,4 +1,4 @@
-package pet;
+package ru.less.pet;
 
 /**
  * Базовый класс для животных

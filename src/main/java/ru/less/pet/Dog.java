@@ -1,4 +1,4 @@
-package pet;
+package ru.less.pet;
 
 /**
  * Created by tr1o on 29.11.17.
